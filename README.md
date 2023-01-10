@@ -81,7 +81,7 @@ _Initial sketch of how data for training (left). Katherine Kuchenbecker’s sens
 
 This experiment was a success in converting image data into tensor data. Ideally, given this 2D visualization data, it is now possible to do discover other dynamics such as gripping forces, orientation, and slipping by tracking position and depth over time. However, this experiment is limited in that it only processes still images at the moment. Some work would need to be done to allow saved video and then streamed video. The visualization format is also less than desired. Initially visualization was intended to show 2D heatmaps and a 3D Digital Twin.
 
-Vision detection can be improved by using dots on the inside of the TPU finger, green and red lights emitting from opposite sides of the sensor, and changing the shape of the sensor to something more conducive to gripping.
+Vision detection can be improved by using dots on the inside of the TPU finger, and green and red lights emitting from opposite sides of the sensor. Additionally, changing the shape of the sensor to something more conducive to gripping would be better.
 
 ## References
 
