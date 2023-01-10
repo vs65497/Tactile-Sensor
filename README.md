@@ -30,6 +30,7 @@ Now that we’ve seen the beginning and end of the pipeline, let’s discuss the
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/processing_top.png" width=600><br />
 _Roboflow Preprocessing and Augmentation steps (left). Spread of bounding boxes over normalized data (right). Notice that the data had a gap at the bottom - the light from the iPhone created a bright spot exactly in that gap making detections there nearly impossible._
 
+
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/processing_bottom.png" width=600><br />
 _Augmented data set (left). Detected deformation (right)._
 
