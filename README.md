@@ -3,14 +3,16 @@ Manipulation is an important aspect of modern robotics. This field focuses on gr
 
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/intro.png" height="400"><br />_Image_: https://spectrum.ieee.org/why-tactile-intelligence-is-the-future-of-robotic-grasping 
 
-# Experimental Setup
+# Experimental Setup and Purpose
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/experimental_setup.png" width=600><br />_TPU finger (left). PLA case (right) allows for repeatable deformations at the same location and prevents warping of the finger._
 
-# Results
+My experiment takes inspiration from talks given by Katherine Kuchenbecker and Oliver Brock. The goal was to make a basic version of a vision-based tactile sensor which detects a deformation in a “finger” made of TPU then converts it to usable data. By vision-based, it is meant that a camera (iPhone 14) looks at the inside surface of a TPU dome and uses computer vision to detect deformations.
+
+# Experimental Results
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/results_top.png" width=600><br />
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/results_bottom.png" width=600>
 
-Let’s have a look at the results first then explain how we got here. At the top is a photo taken from test footage similar to this: https://youtube.com/shorts/2dx2I3SYDVk. It contains a deformation caused by pressing a pen into the side of the TPU finger. Below (_left_), the pipeline has identified the deformation and is showing it as a red dot on this unrolled version of the cone. The depth of the deformation is estimated to be 3.36 mm. Next to it (_right_), is the data discovered from object detection and depth estimation.
+At the top is a photo taken from [test footage](https://youtube.com/shorts/2dx2I3SYDVk). It contains a deformation caused by pressing a pen into the side of the TPU finger. Below (_left_), the pipeline has identified the deformation and is showing it as a red dot on this unrolled version of the cone. The depth of the deformation is estimated to be 3.36 mm. Next to it (_right_), is the data discovered from object detection and depth estimation.
 
 # Procedure
 Now that we’ve seen the beginning and end of the pipeline, let’s discuss the details of how this is done. Below is an infographic showing the full procedure of training and using the pipeline.
