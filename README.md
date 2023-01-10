@@ -18,7 +18,7 @@ At the top is a photo taken from [test footage](https://youtube.com/shorts/2dx2I
 Now that we’ve seen the beginning and end of the pipeline, let’s discuss the details of how this is done. Below is an infographic showing the full procedure of training and using the pipeline.
 
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/Tactile Sensor Pipeline.png">
-
+<br /><br />
 
 ## Phase 1: YOLOv5
 **_Objective_**: Fine-Tune YOLOv5 Model to obtain bounding box data on deformations.<br />
@@ -32,7 +32,7 @@ Now that we’ve seen the beginning and end of the pipeline, let’s discuss the
 
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/processing_top.png" width=600><br />
 _Roboflow Preprocessing and Augmentation steps (left). Spread of bounding boxes over normalized data (right). Notice that the data had a gap at the bottom - the light from the iPhone created a bright spot exactly in that gap making detections there nearly impossible._
-
+<br /><br />
 
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/processing_bottom.png" width=600><br />
 _Augmented data set (left). Detected deformation (right)._
