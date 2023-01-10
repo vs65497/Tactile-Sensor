@@ -9,8 +9,8 @@ https://spectrum.ieee.org/why-tactile-intelligence-is-the-future-of-robotic-gras
 TPU finger (left). PLA case (right) allows for repeatable deformations at the same location and prevents warping of the finger. 
 
 # Results
-<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/results_top.png">
-<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/results_bottom.png">
+<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/results_top.png" width=600>
+<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/results_bottom.png" width=600>
 Let’s have a look at the results first then explain how we got here. At the top is a photo taken from test footage similar to this: https://youtube.com/shorts/2dx2I3SYDVk. It contains a deformation caused by pressing a pen into the side of the TPU finger. Below (left), the pipeline has identified the deformation and is showing it as a red dot on this unrolled version of the cone. The depth of the deformation is estimated to be 3.36 mm. Next to it (right), is the data discovered from object detection and depth estimation.
 
 # Procedure
