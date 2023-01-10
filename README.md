@@ -12,7 +12,7 @@ Manipulation is an important aspect of modern robotics. This field focuses on gr
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/results_top.png" width=600><br />
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/results_bottom.png" width=600>
 
-At the top is a photo taken from test footage similar to [this video](https://youtube.com/shorts/2dx2I3SYDVk). It contains a deformation caused by pressing a pen into the side of the TPU finger. Below (_left_), the pipeline has identified the deformation as a red dot on this unrolled version of the cone. The depth of the deformation is estimated to be 3.36 mm. The data discovered from object detection and depth estimation (_right_).
+The top photo is taken from test footage similar to [this video](https://youtube.com/shorts/2dx2I3SYDVk). It contains a deformation caused by pressing a pen into the side of the TPU finger. Below (_left_), the pipeline has identified the deformation as a red dot on this unrolled version of the cone. The depth of the deformation is estimated to be 3.36 mm. The data discovered from object detection and depth estimation (_right_).
 
 # Procedure
 With an understanding of the pipeline's input and output, let’s discuss the process by which this is done. Below is an infographic showing the full procedure of training and executing the pipeline.
