@@ -18,7 +18,7 @@ At the top is a photo taken from [test footage](https://youtube.com/shorts/2dx2I
 Now that we’ve seen the beginning and end of the pipeline, let’s discuss the details of how this is done. Below is an infographic showing the full procedure of training and using the pipeline.
 
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/Tactile Sensor Pipeline.png">
-<br /><br />
+<br />
 
 ## Phase 1: YOLOv5
 **_Objective_**: Fine-Tune YOLOv5 Model to obtain bounding box data on deformations.<br />
