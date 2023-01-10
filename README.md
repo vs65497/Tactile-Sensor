@@ -5,16 +5,17 @@ Manipulation is an important aspect of modern robotics. This field focuses on gr
 https://spectrum.ieee.org/why-tactile-intelligence-is-the-future-of-robotic-grasping 
 
 # Experimental Setup
-<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/experimental_setup.png" width=600>
-TPU finger (left). PLA case (right) allows for repeatable deformations at the same location and prevents warping of the finger. 
+<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/experimental_setup.png" width=600><br />_TPU finger (left). PLA case (right) allows for repeatable deformations at the same location and prevents warping of the finger._
 
 # Results
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/results_top.png" width=600>
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/results_bottom.png" width=600>
+
 Let’s have a look at the results first then explain how we got here. At the top is a photo taken from test footage similar to this: https://youtube.com/shorts/2dx2I3SYDVk. It contains a deformation caused by pressing a pen into the side of the TPU finger. Below (_left_), the pipeline has identified the deformation and is showing it as a red dot on this unrolled version of the cone. The depth of the deformation is estimated to be 3.36 mm. Next to it (_right_), is the data discovered from object detection and depth estimation.
 
 # Procedure
 Now that we’ve seen the beginning and end of the pipeline, let’s discuss the details of how this is done. Below is an infographic showing the full procedure of training and using the pipeline.
+
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/Tactile Sensor Pipeline.png">
 
 ## Phase 1: YOLOv5
@@ -47,7 +48,7 @@ Now that we’ve seen the beginning and end of the pipeline, let’s discuss the
 A tensor with 9 features. The 10th column, depth, is excluded for training.
 
 ## Phase 3: Live Data, Visualize
-**_Objective_**: Convert live data into a 2D visualization with usable data.
+**_Objective_**: Convert live data into a 2D visualization with usable data.<br />
 **_Notebook_**: https://github.com/zanzivyr/Tactile-Sensor/blob/main/Tactile_Sensor_Visualization.ipynb 
 
 1. **Object Detection** - Same as Phase 2
