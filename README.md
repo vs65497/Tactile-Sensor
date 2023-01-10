@@ -5,7 +5,7 @@ Manipulation is an important aspect of modern robotics. This field focuses on gr
 https://spectrum.ieee.org/why-tactile-intelligence-is-the-future-of-robotic-grasping 
 
 # Experimental Setup
-<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/experimental_setup.png">
+<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/experimental_setup.png" width=600>
 TPU finger (left). PLA case (right) allows for repeatable deformations at the same location and prevents warping of the finger. 
 
 # Results
@@ -26,11 +26,11 @@ Test Footage: https://youtube.com/shorts/2dx2I3SYDVk
 2. Video Data - This video is not a live stream, it is saved.
 3. Select Photos from Video Data - Several still frames are taken from the video showcasing a variety of different deformations. All data can be found on Roboflow - https://app.roboflow.com/tactile-sensor/deformations/browse?queryText=&pageSize=50&startingIndex=0&browseQuery=true 
 4. Annotate Bounding Boxes - Using the website https://www.makesense.ai/ we annotate bounding boxes for training. These photos and labels are then uploaded to Roboflow which then allows users to make different splits between training, test, and validation data sets. Users are also able to add other preprocessing and augmentation steps which are important for normalization and creating synthetic data. With this we are able to 4x the sample data and make training more effective.
-<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/processing_top.png">
-<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/processing_bottom.png">
+<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/processing_top.png" width=600>
+<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/processing_bottom.png" width=600>
 Roboflow Preprocessing and Augmentation steps (top left). Spread of bounding boxes over normalized data (top right). Notice that the data had a gap at the bottom - the light from the iPhone created a bright spot exactly in that gap making detections there nearly impossible. Augmented data set (bottom left). Detected deformation (bottom right).
 5. Fine-Tune YOLOv5 - Using a small amount of data and transfer learning, we fine-tune YOLOv5 to detect deformations. I was able to get accurate detection with a large amount of epochs (120) and a few batches (16).
-<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/processing2.png">
+<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/processing2.png" width=600>
 Roboflow was able to successfully detect deformations based on my training data. However, I did not use Roboflow’s model in this experiment.
 
 ## Phase 2: Deep Neural Network (DNN)
@@ -62,7 +62,7 @@ Notebook: https://github.com/zanzivyr/Tactile-Sensor/blob/main/Tactile_Sensor_Vi
 10. Place Deformation on 2D Plane.
 
 # Initial Concept
-<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/initial_concept.png">
+<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/initial_concept.png" width=600>
 Initial sketch of how data for training (left). Katherine Kuchenbecker’s sensor (right). The majority of this experiment is aimed at reverse engineering this one slide.
 
 ## References
