@@ -1,7 +1,7 @@
 # Tactile-Sensor
 Manipulation is an important aspect of modern robotics. This field focuses on grasping, picking, and placing objects. Grasping an object can be difficult because of its material properties – it could be sharp, slippery, soft, or strangely shaped. For humans, this really provides little challenge because of our skin, however, most current robots have no way of sensing these properties aside from vision. Because of this, researchers have been investigating methods for grippers to detect surface features of the target object. Knowing the shape of an object allows for choosing better picking configurations and more effective placing, especially when used in combination with vision. A tactile sensor helps to fulfill this need.
 
-https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/intro.png
+<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/intro.png" height="320">
 https://spectrum.ieee.org/why-tactile-intelligence-is-the-future-of-robotic-grasping 
 
 # Experimental Setup
