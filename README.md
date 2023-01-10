@@ -54,9 +54,10 @@ _Roboflow was able to successfully detect deformations based on my training data
 6. **Train Deep Neural Network (DNN)** - Using a DNN with a single fully connected layer, with 100 neurons, we pass a tensor with 9 features in and expect to receive one output - _depth_. I did not tune hyperparameters for this experiment. And I did not experiment with parameters due to time constraints.
 
 <img src="https://qph.cf2.quoracdn.net/main-qimg-6f8d8e883d420ae86036f0e2a00f4161-lq" width=400><br />
+_Image_: https://www.quora.com/Why-dont-we-initialize-the-weights-of-a-neural-network-to-zero<br />
 _Deep Neural Network with 1 hidden layer. Our DNN has 9 features in the input and 100 neurons in the hidden layer._
 
-<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/tensor.png" width=400><br />
+<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/tensor.png" width=500><br />
 _A tensor with 9 features. The 10th column, depth, is excluded for training._
 
 ## Phase 3: Live Data, Visualize
@@ -99,8 +100,8 @@ _YOLO description, tutorial and the original paper_
 - https://towardsdatascience.com/yolo-v5-object-detection-tutorial-2e607b9013ef 
 - https://arxiv.org/pdf/2209.02976.pdf 
 
-Why Tactile Intelligence Is the Future of Robotic Grasping
+_Why Tactile Intelligence Is the Future of Robotic Grasping_
 - https://spectrum.ieee.org/why-tactile-intelligence-is-the-future-of-robotic-grasping 
 
-Why don't we initialize the weights of a neural network to zero?
+_Why don't we initialize the weights of a neural network to zero?_
 - https://www.quora.com/Why-dont-we-initialize-the-weights-of-a-neural-network-to-zero
