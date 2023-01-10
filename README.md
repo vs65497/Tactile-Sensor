@@ -6,7 +6,7 @@ Manipulation is an important aspect of modern robotics. This field focuses on gr
 # Experimental Setup and Purpose
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/experimental_setup.png" width=600><br />_TPU finger (left). PLA case (right) allows for repeatable deformations at the same location and prevents warping of the finger._
 
-My experiment takes inspiration from talks given by Katherine Kuchenbecker and Oliver Brock. The goal was to make a basic version of a vision-based tactile sensor which detects a deformation in a “finger” made of TPU then converts it to usable data. By vision-based, it is meant that a camera (iPhone 14) looks at the inside surface of a TPU dome and uses computer vision to detect deformations.
+**Purpose**: The goal was to make a basic version of a vision-based tactile sensor which detects a deformation in a “finger” made of TPU then converts it to usable data. By vision-based, it is meant that a camera (iPhone 14) looks at the inside surface of a TPU dome and uses computer vision to detect deformations. My experiment takes inspiration from talks given by Katherine Kuchenbecker and Oliver Brock.
 
 # Experimental Results
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/results_top.png" width=600><br />
