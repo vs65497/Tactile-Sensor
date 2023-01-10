@@ -19,6 +19,7 @@ Now that we’ve seen the beginning and end of the pipeline, let’s discuss the
 
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/Tactile Sensor Pipeline.png">
 
+
 ## Phase 1: YOLOv5
 **_Objective_**: Fine-Tune YOLOv5 Model to obtain bounding box data on deformations.<br />
 **_Notebook_**: https://github.com/zanzivyr/Tactile-Sensor/blob/main/YOLOv5_Deformations_Training.ipynb <br />
