@@ -79,7 +79,9 @@ _A tensor with 9 features. The 10th column, depth, is excluded for training._
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/initial_concept.png" width=600><br />
 _Initial sketch of how data for training (left). Katherine Kuchenbecker’s sensor (right). The majority of this experiment is aimed at reverse engineering this one slide._
 
-This experiment was a success in converting image data into tensor data. Ideally, given this 2D visualization data, it is now possible to do discover other dynamics such as gripping forces, orientation, and slipping by tracking position and depth over time. However, this experiment is limited in that it only processes still images at the moment. Some work would need to be done to allow saved video and then streamed video. The visualization format is also less than desired
+This experiment was a success in converting image data into tensor data. Ideally, given this 2D visualization data, it is now possible to do discover other dynamics such as gripping forces, orientation, and slipping by tracking position and depth over time. However, this experiment is limited in that it only processes still images at the moment. Some work would need to be done to allow saved video and then streamed video. The visualization format is also less than desired. Initially visualization was intended to show 2D heatmaps and a 3D Digital Twin.
+
+Vision detection can be improved by using dots on the inside of the TPU finger, green and red lights emitting from opposite sides of the sensor, and changing the shape of the sensor to something more conducive to gripping.
 
 ## References
 
