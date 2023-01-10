@@ -28,19 +28,19 @@ _Pipeline for developing the tactile sensor. Includes 3 phases: YOLOv5, DNN, and
 1. **Conduct Experiment** - A video is recorded with several deformations at different angles and depths being made. Care is taken not to warp the finger or move the camera.
 2. **Video Data** - This video is not a live stream, it is saved.
 3. **Select Photos from Video Data** - Several still frames are taken from the video showcasing a variety of different deformations. All data can be found on Roboflow - https://app.roboflow.com/tactile-sensor/deformations/browse?queryText=&pageSize=50&startingIndex=0&browseQuery=true 
-4. **Annotate Bounding Boxes** - Using the website https://www.makesense.ai/ we annotate bounding boxes for training. These photos and labels are then uploaded to Roboflow which then allows users to make different splits between training, test, and validation data sets. Users are also able to add other preprocessing and augmentation steps which are important for normalization and creating synthetic data. With this we are able to 4x the sample data and make training more effective.
+4. **Annotate Bounding Boxes** - Using https://www.makesense.ai/ we annotate bounding boxes for training. The photos and labels are then uploaded to Roboflow allowing users to make different splits between training, test, and validation data sets. Afterward other preprocessing and augmentation steps are available for normalization and  synthetic data. Without additional video we can generate 4x more data for training.
 
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/processing_top.png" width=600><br />
-_Roboflow Preprocessing and Augmentation steps (left). Spread of bounding boxes over normalized data (right). Notice that the data had a gap at the bottom - the light from the iPhone created a bright spot exactly in that gap making detections there nearly impossible._
+_Roboflow Preprocessing and Augmentation steps (left). Spread of bounding boxes over normalized data (right). Notice the gap at the bottom - the iPhone light created a bright highlight exactly here making detections nearly impossible._
 <br /><br />
 
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/processing_bottom.png" width=600><br />
 _Augmented data set (left). Detected deformation (right)._
 
-5. **Fine-Tune YOLOv5** - Using a small amount of data and transfer learning, we fine-tune YOLOv5 to detect deformations. I was able to get accurate detection with a large amount of epochs (120) and a few batches (16).
+5. **Fine-Tune YOLOv5** - Using a small amount of data and transfer learning, we fine-tune YOLOv5 to detect deformations. Accurate detections were obtained with 120 epochs of 16 batches.
 
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/processing2.png" width=600><br />
-_Roboflow was able to successfully detect deformations based on my training data. However, I did not use Roboflow’s model in this experiment._
+_Roboflow was able to successfully detect deformations based on my training data. However, Roboflow’s trained model is not used in this experiment._
 
 ## Phase 2: Deep Neural Network (DNN)
 **_Objective_**: Train a DNN to predict deformation depth.<br />
@@ -49,9 +49,9 @@ _Roboflow was able to successfully detect deformations based on my training data
 1. **Object Detection** - Using the previously trained YOLOv5 model.
 2. **Deformations** - A tensor of detected deformations is created.
 3. **Annotate Depths** - Given these deformations, we manually annotate depths and add the data to the tensor.
-4. **Reshape Tensor** - Add more fields to the tensor to give the next neural network more features to train on.
+4. **Reshape Tensor** - Adds more fields to the tensor to give the next neural network more features to train on.
 5. **Normalize Data** - This gives the neural network a battery ability to compare each data point.
-6. **Train Deep Neural Network (DNN)** - Using a DNN with a single fully connected layer, with 100 neurons, we pass a tensor with 9 features in and expect to receive one output - _depth_. I did not tune hyperparameters for this experiment. And I did not experiment with parameters due to time constraints.
+6. **Train Deep Neural Network (DNN)** - Using a DNN with a single fully connected layer, with 100 neurons, we pass a tensor with 9 features in and expect to receive one output - _depth_. Hyperparameters and parameters are not tuned for this experiment.
 
 <img src="https://qph.cf2.quoracdn.net/main-qimg-6f8d8e883d420ae86036f0e2a00f4161-lq" width=400><br />
 _Image_: https://www.quora.com/Why-dont-we-initialize-the-weights-of-a-neural-network-to-zero<br />
@@ -64,10 +64,10 @@ _A tensor with 9 features. The 10th column, depth, is excluded for training._
 **_Objective_**: Convert live data into a 2D visualization with usable data.<br />
 **_Notebook_**: https://github.com/zanzivyr/Tactile-Sensor/blob/main/Tactile_Sensor_Visualization.ipynb 
 
-1. **Object Detection** - Same as Phase 2
+1. **Object Detection** - Same as Phase 2.
 2. **Partial Deformation Data** - This gives the 9 feature tensor without depth.
-3. **Reshape Tensor** - Same as Phase 2
-4. **Normalize Data** - Same as Phase 2
+3. **Reshape Tensor** - Same as Phase 2.
+4. **Normalize Data** - Same as Phase 2.
 5. **Depth Inference** - We feed the normalized deformation data into the DNN to obtain a depth inference.
 6. **Full Deformation Data** - This gives a 10 feature tensor including depth.
 7. **De-normalize Data** - We convert the tensor back to its real values given normalization information saved during training of the DNN.
