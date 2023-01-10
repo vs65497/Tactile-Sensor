@@ -43,7 +43,7 @@ Notebook: https://github.com/zanzivyr/Tactile-Sensor/blob/main/Tactile_Sensor_CN
 4. Reshape Tensor - Add more fields to the tensor to give the next neural network more features to train on.
 5. Normalize Data - This gives the neural network a battery ability to compare each data point.
 6. Train Deep Neural Network (DNN) - Using a DNN with a single fully connected layer, with 100 neurons, we pass a tensor with 9 features in and expect to receive one output - depth. I did not tune hyperparameters for this experiment. And I did not experiment with parameters due to time constraints.
-<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/tensor.png">
+<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/tensor.png" width=700>
 A tensor with 9 features. The 10th column, depth, is excluded for training.
 
 ## Phase 3: Live Data, Visualize
