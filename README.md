@@ -28,8 +28,10 @@ Now that we’ve seen the beginning and end of the pipeline, let’s discuss the
 4. **Annotate Bounding Boxes** - Using the website https://www.makesense.ai/ we annotate bounding boxes for training. These photos and labels are then uploaded to Roboflow which then allows users to make different splits between training, test, and validation data sets. Users are also able to add other preprocessing and augmentation steps which are important for normalization and creating synthetic data. With this we are able to 4x the sample data and make training more effective.
 
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/processing_top.png" width=600><br />
+_Roboflow Preprocessing and Augmentation steps (left). Spread of bounding boxes over normalized data (right). Notice that the data had a gap at the bottom - the light from the iPhone created a bright spot exactly in that gap making detections there nearly impossible._
+
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/processing_bottom.png" width=600><br />
-_Roboflow Preprocessing and Augmentation steps (top left). Spread of bounding boxes over normalized data (top right). Notice that the data had a gap at the bottom - the light from the iPhone created a bright spot exactly in that gap making detections there nearly impossible. Augmented data set (bottom left). Detected deformation (bottom right)._
+_Augmented data set (left). Detected deformation (right)._
 
 5. **Fine-Tune YOLOv5** - Using a small amount of data and transfer learning, we fine-tune YOLOv5 to detect deformations. I was able to get accurate detection with a large amount of epochs (120) and a few batches (16).
 
