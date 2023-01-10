@@ -56,7 +56,7 @@ _Roboflow was able to successfully detect deformations based on my training data
 <img src="https://qph.cf2.quoracdn.net/main-qimg-6f8d8e883d420ae86036f0e2a00f4161-lq" width=400><br />
 _Deep Neural Network with 1 hidden layer. Our DNN has 9 features in the input and 100 neurons in the hidden layer._
 
-<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/tensor.png" width=700><br />
+<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/tensor.png" width=400><br />
 _A tensor with 9 features. The 10th column, depth, is excluded for training._
 
 ## Phase 3: Live Data, Visualize
