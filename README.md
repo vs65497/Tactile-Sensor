@@ -95,7 +95,7 @@ _MIT Robotics - Katherine Kuchenbecker - Tactile Sensing for Robots with Haptic 
 _MIT Robotics - Oliver Brock - Why I Believe That AI-Robotics is Stuck_
 - https://youtu.be/tr6aatJL84A?t=1440 
 
-_FastAI fastbook and any related papers_
+_FastAI fastbook and related papers_
 - https://github.com/fastai/fastbook
 - https://docs.fast.ai/tutorial.tabular.html 
 - https://arxiv.org/pdf/1604.06737.pdf
