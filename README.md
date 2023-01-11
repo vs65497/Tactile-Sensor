@@ -44,7 +44,7 @@ _Roboflow was able to successfully detect deformations based on my training data
 
 ## Phase 2: Deep Neural Network (DNN)
 **_Objective_**: Train a DNN to predict deformation depth.<br />
-**_Notebook_**: https://github.com/zanzivyr/Tactile-Sensor/blob/main/Tactile_Sensor_CNN.ipynb 
+**_Notebook_**: https://github.com/zanzivyr/Tactile-Sensor/blob/main/Tactile_Sensor_DNN.ipynb 
 
 1. **Object Detection** - Using the previously trained YOLOv5 model.
 2. **Deformations** - A tensor of detected deformations is created.
