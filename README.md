@@ -1,4 +1,7 @@
 # Tactile Sensor
+
+Von Simmons, Winter 2022-2023
+
 Manipulation is an important aspect of modern robotics. This field focuses on grasping, picking, and placing objects. Grasping a sharp, slippery, soft, or strangely shaped object can prove difficult. While this provides little challenge to humans, many robots struggle without a sense of touch. As a result researchers have developed tactile sensors. In effect, their use allows for more effective picking and placing configurations -- especially when used in combination with vision.
 
 <img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/intro.png" height="400"><br />_Image_: https://spectrum.ieee.org/why-tactile-intelligence-is-the-future-of-robotic-grasping 
