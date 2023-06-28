@@ -4,23 +4,23 @@ Von Simmons, Winter 2022-2023
 
 Manipulation is an important aspect of modern robotics. This field focuses on grasping, picking, and placing objects. Grasping a sharp, slippery, soft, or strangely shaped object can prove difficult. While this provides little challenge to humans, many robots struggle without a sense of touch. As a result researchers have developed tactile sensors. In effect, their use allows for more effective picking and placing configurations -- especially when used in combination with vision.
 
-<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/intro.png" height="400"><br />_Image_: https://spectrum.ieee.org/why-tactile-intelligence-is-the-future-of-robotic-grasping 
+<img src="https://github.com/vs65497/Tactile-Sensor/blob/main/presentation/intro.png" height="400"><br />_Image_: https://spectrum.ieee.org/why-tactile-intelligence-is-the-future-of-robotic-grasping 
 
 # Experimental Setup and Purpose
-<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/experimental_setup.png" width=600><br />_TPU finger (left). PLA case (right) allows for repeatable deformations at the same location and prevents warping of the finger._
+<img src="https://github.com/vs65497/Tactile-Sensor/blob/main/presentation/experimental_setup.png" width=600><br />_TPU finger (left). PLA case (right) allows for repeatable deformations at the same location and prevents warping of the finger._
 
 **Purpose**: To make a vision-based tactile sensor which converts images of detected deformations to data with location and depth. Vision-based means applying computer vision with a camera (iPhone 14) aimed at the inside surface of a TPU dome. This experiment takes inspiration from talks given by Katherine Kuchenbecker and Oliver Brock.
 
 # Experimental Results
-<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/results_top.png" width=600><br />
-<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/results_bottom.png" width=600>
+<img src="https://github.com/vs65497/Tactile-Sensor/blob/main/presentation/results_top.png" width=600><br />
+<img src="https://github.com/vs65497/Tactile-Sensor/blob/main/presentation/results_bottom.png" width=600>
 
 The top photo is taken from test footage similar to [this video](https://youtube.com/shorts/2dx2I3SYDVk). It contains a deformation caused by pressing a pen into the side of the TPU finger. Below (_left_), the pipeline has identified the deformation as a red dot on this unrolled version of the cone. The depth of the deformation is estimated to be 3.36 mm. The data discovered from object detection and depth estimation (_right_).
 
 # Procedure
 With an understanding of the pipeline's input and output, let’s discuss the process by which this is done. Below is an infographic showing the full procedure of training and executing the pipeline.
 
-<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/Tactile Sensor Pipeline.png"><br />
+<img src="https://github.com/vs65497/Tactile-Sensor/blob/main/presentation/Tactile Sensor Pipeline.png"><br />
 _Pipeline for developing the tactile sensor. Includes 3 phases: YOLOv5, DNN, and Live Data -> Visualization._
 
 ## Phase 1: YOLOv5
@@ -33,16 +33,16 @@ _Pipeline for developing the tactile sensor. Includes 3 phases: YOLOv5, DNN, and
 3. **Select Photos from Video Data** - Several still frames are taken from the video showcasing a variety of different deformations. All data can be found on Roboflow - https://app.roboflow.com/tactile-sensor/deformations/browse?queryText=&pageSize=50&startingIndex=0&browseQuery=true 
 4. **Annotate Bounding Boxes** - Using https://www.makesense.ai/ we annotate bounding boxes for training. The photos and labels are then uploaded to Roboflow allowing users to make different splits between training, test, and validation data sets. Afterward other preprocessing and augmentation steps are available for normalization and  synthetic data. Without additional video we can generate 4x more data for training.
 
-<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/processing_top.png" width=600><br />
+<img src="https://github.com/vs65497/Tactile-Sensor/blob/main/presentation/processing_top.png" width=600><br />
 _Roboflow Preprocessing and Augmentation steps (left). Spread of bounding boxes over normalized data (right). Notice the gap at the bottom - the iPhone light created a bright highlight exactly here making detections nearly impossible._
 <br /><br />
 
-<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/processing_bottom.png" width=600><br />
+<img src="https://github.com/vs65497/Tactile-Sensor/blob/main/presentation/processing_bottom.png" width=600><br />
 _Augmented data set (left). Detected deformation (right)._
 
 5. **Fine-Tune YOLOv5** - Using a small amount of data and transfer learning, we fine-tune YOLOv5 to detect deformations. Accurate detections were obtained with 120 epochs of 16 batches.
 
-<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/processing2.png" width=600><br />
+<img src="https://github.com/vs65497/Tactile-Sensor/blob/main/presentation/processing2.png" width=600><br />
 _Roboflow was able to successfully detect deformations based on my training data. However, Roboflow’s trained model is not used in this experiment._
 
 ## Phase 2: Deep Neural Network (DNN)
@@ -60,7 +60,7 @@ _Roboflow was able to successfully detect deformations based on my training data
 _Image_: https://www.quora.com/Why-dont-we-initialize-the-weights-of-a-neural-network-to-zero<br />
 _Deep Neural Network with 1 hidden layer. Our DNN has 9 features in the input and 100 neurons in the hidden layer._
 
-<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/tensor.png" width=500><br />
+<img src="https://github.com/vs65497/Tactile-Sensor/blob/main/presentation/tensor.png" width=500><br />
 _A tensor with 9 features. The 10th column, depth, is excluded for training._
 
 ## Phase 3: Live Data, Visualize
@@ -79,7 +79,7 @@ _A tensor with 9 features. The 10th column, depth, is excluded for training._
 10. Place Deformation on 2D Plane.
 
 # Conclusion
-<img src="https://github.com/zanzivyr/Tactile-Sensor/blob/main/presentation/initial_concept.png" width=600><br />
+<img src="https://github.com/vs65497/Tactile-Sensor/blob/main/presentation/initial_concept.png" width=600><br />
 _Initial sketch of how data for training (left). Katherine Kuchenbecker’s sensor (right). The majority of this experiment is aimed at reverse engineering this one slide._
 
 This experiment was a success in converting image data into tensor data. Ideally, given this 2D visualization data, it is now possible to do discover other dynamics such as gripping forces, orientation, and slipping by tracking position and depth over time. However, this experiment is limited in that it only processes still images at the moment. Some work would need to be done to allow saved video and then streamed video. The visualization format is also less than desired. Initially visualization was intended to show 2D heatmaps and a 3D Digital Twin.
