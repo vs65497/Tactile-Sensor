@@ -25,7 +25,7 @@ _Pipeline for developing the tactile sensor. Includes 3 phases: YOLOv5, DNN, and
 
 ## Phase 1: YOLOv5
 **_Objective_**: Fine-Tune YOLOv5 Model to obtain bounding box data on deformations.<br />
-**_Notebook_**: https://github.com/zanzivyr/Tactile-Sensor/blob/main/YOLOv5_Deformations_Training.ipynb <br />
+**_Notebook_**: https://github.com/vs65497/Tactile-Sensor/blob/main/YOLOv5_Deformations_Training.ipynb <br />
 **_Test Footage_**: https://youtube.com/shorts/2dx2I3SYDVk
 
 1. **Conduct Experiment** - A video is recorded with several deformations at different angles and depths being made. Care is taken not to warp the finger or move the camera.
@@ -47,7 +47,7 @@ _Roboflow was able to successfully detect deformations based on my training data
 
 ## Phase 2: Deep Neural Network (DNN)
 **_Objective_**: Train a DNN to predict deformation depth.<br />
-**_Notebook_**: https://github.com/zanzivyr/Tactile-Sensor/blob/main/Tactile_Sensor_DNN.ipynb 
+**_Notebook_**: https://github.com/vs65497/Tactile-Sensor/blob/main/Tactile_Sensor_DNN.ipynb 
 
 1. **Object Detection** - Using the previously trained YOLOv5 model.
 2. **Deformations** - A tensor of detected deformations is created.
