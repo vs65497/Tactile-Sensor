@@ -65,7 +65,7 @@ _A tensor with 9 features. The 10th column, depth, is excluded for training._
 
 ## Phase 3: Live Data, Visualize
 **_Objective_**: Convert live data into a 2D visualization with usable data.<br />
-**_Notebook_**: https://github.com/zanzivyr/Tactile-Sensor/blob/main/Tactile_Sensor_Visualization.ipynb 
+**_Notebook_**: https://github.com/vs65497/Tactile-Sensor/blob/main/Tactile_Sensor_Visualization.ipynb 
 
 1. **Object Detection** - Same as Phase 2.
 2. **Partial Deformation Data** - This gives the 9 feature tensor without depth.
